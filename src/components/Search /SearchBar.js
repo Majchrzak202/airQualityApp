@@ -1,6 +1,9 @@
+import './SearchBar.css'
+
 const SearchBar = () => {
   return (
-    <div>
+    <section className="section-search">
+    <div className='searchbar'>
       <form>
         <div>
           <input />
@@ -10,6 +13,7 @@ const SearchBar = () => {
         </div>
       </form>
     </div>
+    </section>
   );
 };
 

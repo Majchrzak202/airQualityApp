@@ -1,0 +1,14 @@
+.section-search {
+  display: flex;
+  min-height: 30vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.searchbar {
+  display: flex;
+  min-height: 20vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

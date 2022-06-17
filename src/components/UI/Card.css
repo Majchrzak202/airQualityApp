@@ -1,0 +1,18 @@
+.card {
+    display: flex;
+    max-width: 60vw;
+    min-height: 60vh;
+    min-width: 60vw;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(147, 100.00%, 86.61%, 0.54);
+  }
+  
+  .div-block-3:tiny {
+    min-width: 90vw;
+    flex-direction: column;
+  }
+  
+  .div-block-3:small {
+    min-width: 90vw;
+  }

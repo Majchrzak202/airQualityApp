@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  min-height: 10vh;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(187, 255, 217, 0.54);
+  margin-top: 20px;
+}
+.footer p {
+  margin-right: 25px;
+}

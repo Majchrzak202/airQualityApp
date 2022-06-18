@@ -6,10 +6,10 @@ const SearchBar = () => {
     <div className='searchbar'>
       <form>
         <div>
-          <input />
+          <input placeholder='City name'/>
         </div>
         <div>
-          <button>Click</button>
+          <button>Search</button>
         </div>
       </form>
     </div>

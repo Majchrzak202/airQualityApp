@@ -14,6 +14,8 @@ const App = () => {
   const [search, setSearch] = useState("");
   const [airQuality, setAirQuality] = useState();
 
+  console.log(airQuality)
+
   const searchHandler = (city) => {
     setSearch(city);
   };
@@ -24,18 +26,19 @@ const App = () => {
         `${api.base}//current/airquality?city=${search}&key=${api.key}`
       );
       const data = await response.json();
-      console.log(data);
       setAirQuality(data);
     };
 
     fetchAirQuality();
   }, [search]);
 
+  if (AirQuality !== undefined)
+
   return (
     <div>
       <Navbar />
       <SearchBar searchHandler={searchHandler} />
-      <AirQuality />
+      <AirQuality airQuality={airQuality} />
       <RecomendationList />
       <Footer />
     </div>

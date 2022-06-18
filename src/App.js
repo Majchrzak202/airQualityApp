@@ -11,7 +11,7 @@ const api = {
 };
 
 const App = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("Warszawa");
   const [airQuality, setAirQuality] = useState();
 
   console.log(airQuality)
@@ -32,7 +32,7 @@ const App = () => {
     fetchAirQuality();
   }, [search]);
 
-  if (AirQuality !== undefined)
+  
 
   return (
     <div>

@@ -13,8 +13,9 @@ const api = {
 const App = () => {
   const [search, setSearch] = useState("Warszawa");
   const [airQuality, setAirQuality] = useState();
+  const [aqiLevel, setAqiLevel] = useState("");
 
-  console.log(airQuality)
+  
 
   const searchHandler = (city) => {
     setSearch(city);
@@ -27,19 +28,18 @@ const App = () => {
       );
       const data = await response.json();
       setAirQuality(data);
+      setAqiLevel(data.data[0].aqi);
     };
 
     fetchAirQuality();
   }, [search]);
-
-  
 
   return (
     <div>
       <Navbar />
       <SearchBar searchHandler={searchHandler} />
       <AirQuality airQuality={airQuality} />
-      <RecomendationList />
+      <RecomendationList aqiLevel={aqiLevel} />
       <Footer />
     </div>
   );

@@ -18,6 +18,10 @@
   .grid-item p {
     text-align: center;
   }
+  .grid-item img {
+    max-width: 40;
+    max-height: 40px;
+  }
 
   .grid-list {
     display: grid;

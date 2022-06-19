@@ -2,11 +2,11 @@ import Card from "../UI/Card";
 import "./RecomendationList.css";
 import RecomendationItem from "./RecomendationItem";
 
-const RecomendationList = () => {
+const RecomendationList = ({ aqiLevel }) => {
   return (
     <section className="section-recomendation">
       <Card>
-        <RecomendationItem />
+        <RecomendationItem aqiLevel={aqiLevel} />
       </Card>
     </section>
   );

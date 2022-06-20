@@ -1,3 +1,4 @@
+import React from "react";
 import "./AirQuality.css";
 import Card from "../UI/Card";
 import Green from "../assets/GREEN.png";
@@ -10,25 +11,23 @@ import otherGreen from "../assets/OTHER-GREEN.png";
 import otherOrange from "../assets/OTHER_ORANGE.png";
 import otherRed from "../assets/OTHER_RED.png";
 
-const AirQuality = ({ airQuality }) => {
-  let aqiLevel = "";
+const AirQuality = ({ airQuality, aqiLevel }) => {
   let pm10Level = "";
   let pm25Level = "";
   let o3Level = "";
 
   if (airQuality !== undefined) {
-    aqiLevel = airQuality.data[0].aqi;
     pm10Level = airQuality.data[0].pm10.toFixed(1);
     pm25Level = airQuality.data[0].pm25.toFixed(1);
     o3Level = airQuality.data[0].o3.toFixed(1);
   }
 
+  console.log(aqiLevel);
+
   let imageAqiUrl = "";
   let imagePM10 = "";
   let imagePM25 = "";
   let imageo3 = "";
-
-  
 
   if (aqiLevel < 50) {
     imageAqiUrl = Green;
@@ -74,7 +73,7 @@ const AirQuality = ({ airQuality }) => {
     imagePM25 = otherRed;
   }
 
-   if (o3Level < 50) {
+  if (o3Level < 50) {
     imageo3 = otherGreen;
   }
 
@@ -84,7 +83,7 @@ const AirQuality = ({ airQuality }) => {
 
   if (o3Level > 150) {
     imageo3 = otherRed;
-  } 
+  }
 
   return (
     <section className="air-section">

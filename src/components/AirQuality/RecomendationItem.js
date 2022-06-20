@@ -1,3 +1,4 @@
+import React from "react";
 import "./RecomendationItem.css";
 import greenBike from "../assets/greenbike.png";
 import greenWindow from "..//assets/greenwindow.png";
@@ -27,6 +28,8 @@ const RecomendationItem = ({ aqiLevel }) => {
     recoText = ['Avoid any outdoor activities', 'Dont open windows', 'Wear mask when outside']
     recoImg = [redBike, redWindow, redMask]
   }
+
+  console.log(aqiLevel)
 
   return (
     <div className="grid-list">

@@ -30,7 +30,7 @@ const App = () => {
       const data = await response.json();
       setAirQuality(data);
       setAqiLevel(data.data[0].aqi);
-      console.log(aqiLevel);
+      
     };
 
     fetchAirQuality();

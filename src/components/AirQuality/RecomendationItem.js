@@ -45,10 +45,7 @@ const RecomendationItem = ({ aqiLevel }) => {
         <img alt='grid3' src={recoImg[2]} />
         <p>{recoText[2]}</p>
       </div>
-      <div className="grid-item">
-        <img />
-        <p>Shaloom</p>
-      </div>
+      
     </div>
   );
 };

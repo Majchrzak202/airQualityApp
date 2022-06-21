@@ -1,5 +1,5 @@
 import "./SearchBar.css";
-import React,{ useState } from "react";
+import React, { useState } from "react";
 
 const SearchBar = ({ searchHandler }) => {
   const [input, setInput] = useState("");
@@ -20,22 +20,35 @@ const SearchBar = ({ searchHandler }) => {
   };
 
   return (
-    <section className="section-search">
+    <div className="form">
+      <form>
+        <div className="input">
+          <input onChange={inputHandler} type="text" value={input} />
+        </div>
+        <div className="form-button">
+          <button onClick={citySearchHandler} className="button">
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+
+    /*  <section className="section-search">
       <div className="searchbar">
         <form>
-          <div>
+          <div className='input'>
             <input
               value={input}
               onChange={inputHandler}
               placeholder="City name"
             />
           </div>
-          <div>
-            <button onClick={citySearchHandler}>Search</button>
+          <div className='form-button'>
+            <button className="button" onClick={citySearchHandler}>Search</button>
           </div>
         </form>
       </div>
-    </section>
+    </section> */
   );
 };
 

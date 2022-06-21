@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./AirQuality.css";
 import Card from "../UI/Card";
 import Green from "../assets/GREEN.png";
@@ -12,6 +12,8 @@ import otherOrange from "../assets/OTHER_ORANGE.png";
 import otherRed from "../assets/OTHER_RED.png";
 
 const AirQuality = ({ airQuality, aqiLevel }) => {
+  const [aqiImage, setAqiImage] = useState("");
+
   let pm10Level = "";
   let pm25Level = "";
   let o3Level = "";
@@ -22,32 +24,34 @@ const AirQuality = ({ airQuality, aqiLevel }) => {
     o3Level = airQuality.data[0].o3.toFixed(1);
   }
 
-  console.log(aqiLevel);
+  useEffect(() => {
+    const aqiImageHandler = () => {
+      switch (true) {
+        case aqiLevel <= 50:
+          setAqiImage(Green);
+          break;
+        case aqiLevel >= 51 && aqiLevel <= 99:
+          setAqiImage(Yellow);
+          break;
+        case aqiLevel >= 100 && aqiLevel <= 149:
+          setAqiImage(Orange);
+          break;
+        case aqiLevel >= 150 && aqiLevel <= 199:
+          setAqiImage(Red);
+          break;
+        case aqiLevel >= 200:
+          setAqiImage(Purple);
+          break;
+        default:
+          setAqiImage("");
+      }
+    };
+    aqiImageHandler();
+  }, [aqiLevel]);
 
-  let imageAqiUrl = "";
   let imagePM10 = "";
   let imagePM25 = "";
   let imageo3 = "";
-
-  if (aqiLevel < 50) {
-    imageAqiUrl = Green;
-  }
-
-  if (aqiLevel > 50 && aqiLevel < 100) {
-    imageAqiUrl = Yellow;
-  }
-
-  if (aqiLevel > 100 && aqiLevel < 150) {
-    imageAqiUrl = Orange;
-  }
-
-  if (aqiLevel > 150 && aqiLevel < 200) {
-    imageAqiUrl = Red;
-  }
-
-  if (aqiLevel > 200 && aqiLevel < 300) {
-    imageAqiUrl = Purple;
-  }
 
   if (pm10Level < 55) {
     imagePM10 = otherGreen;
@@ -88,22 +92,22 @@ const AirQuality = ({ airQuality, aqiLevel }) => {
   return (
     <section className="air-section">
       <Card>
-        <img className="image" src={imageAqiUrl} alt="img" />
+        <img className="image" src={aqiImage} alt="img" />
         <div className="us-aqi">
           <h3>AQI LEVEL: {aqiLevel}</h3>
         </div>
         <ul className="air-list">
           <li className="air-list-li">
             <img alt="3" src={imagePM10}></img>
-            <div>{pm10Level}</div>
+            <div>PM 10:{pm10Level}</div>
           </li>
           <li className="air-list-li">
             <img alt="2" src={imagePM25}></img>
-            <div>{pm25Level}</div>
+            <div>PM 25:{pm25Level}</div>
           </li>
           <li className="air-list-li">
             <img alt="1" src={imageo3}></img>
-            <div>{o3Level}</div>
+            <div>o3:{o3Level}</div>
           </li>
         </ul>
       </Card>

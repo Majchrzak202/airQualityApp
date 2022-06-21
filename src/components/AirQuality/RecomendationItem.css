@@ -7,6 +7,8 @@
     min-width: 5em;
     margin-left: 5px;
     margin-right: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   
   .Block:local-styles {
@@ -34,7 +36,7 @@
     grid-auto-columns: 1fr;
     grid-column-gap: 16px;
     grid-row-gap: 16px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: auto;
-    background-color: rgba(187, 255, 217, 0.54)
+    background-color: rgba(187, 255, 216, 0);
   }

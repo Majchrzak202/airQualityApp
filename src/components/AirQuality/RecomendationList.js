@@ -7,7 +7,7 @@ const RecomendationList = ({ aqiLevel }) => {
   return (
     <section className="section-recomendation">
       <Card>
-        <RecomendationItem aqiLevel={aqiLevel}  />
+        <RecomendationItem aqiLevel={aqiLevel} />
       </Card>
     </section>
   );

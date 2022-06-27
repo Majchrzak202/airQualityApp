@@ -21,9 +21,10 @@ const SearchBar = ({ searchHandler }) => {
 
   return (
     <div className="form">
+      <h2>Search the City or Country...</h2>
       <form>
         <div className="input">
-          <input onChange={inputHandler} type="text" value={input} />
+          <input onChange={inputHandler} type="text" value={input} placeholder='city/country name' />
         </div>
         <div className="form-button">
           <button onClick={citySearchHandler} className="button">

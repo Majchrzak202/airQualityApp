@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from "../Search /SearchBar";
 import AirQuality from "../AirQuality/AirQuality";
 import RecomendationList from "../AirQuality/RecomendationList";
+import './Info.css'
 
 const Home = ({ searchHandler, aqiLevel, airQuality }) => {
   return (

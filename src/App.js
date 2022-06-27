@@ -38,6 +38,7 @@ const App = () => {
 
   return (
     <Router>
+      <div className="app">
       <Navbar />
       <Routes>
         <Route
@@ -55,6 +56,7 @@ const App = () => {
         <Route path="Info" element={<Info />}></Route>
       </Routes>
       <Footer />
+      </div>
     </Router>
   );
 };

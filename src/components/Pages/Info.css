@@ -1,0 +1,11 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+.info p {
+    width: 500px;
+}

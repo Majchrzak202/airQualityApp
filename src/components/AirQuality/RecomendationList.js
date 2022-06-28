@@ -3,11 +3,11 @@ import Card from "../UI/Card";
 import "./RecomendationList.css";
 import RecomendationItem from "./RecomendationItem";
 
-const RecomendationList = ({ aqiLevel }) => {
+const RecomendationList = ({ aqiLevel ,airQuality}) => {
   return (
     <section className="section-recomendation">
       <Card>
-        <RecomendationItem aqiLevel={aqiLevel} />
+        <RecomendationItem airQuality={airQuality} aqiLevel={aqiLevel} />
       </Card>
     </section>
   );

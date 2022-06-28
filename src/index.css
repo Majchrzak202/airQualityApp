@@ -18,8 +18,3 @@ code {
   min-height: 80vh;
   min-width: 100vw;
 }
-
-.app {
-  display: flex;
-  flex-direction: column;
-}

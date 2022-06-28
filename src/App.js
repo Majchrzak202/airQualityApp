@@ -30,7 +30,6 @@ const App = () => {
       const data = await response.json();
       setAirQuality(data);
       setAqiLevel(data.data[0].aqi);
-      
     };
 
     fetchAirQuality();
@@ -38,7 +37,6 @@ const App = () => {
 
   return (
     <Router>
-      <div className="app">
       <Navbar />
       <Routes>
         <Route
@@ -56,7 +54,6 @@ const App = () => {
         <Route path="Info" element={<Info />}></Route>
       </Routes>
       <Footer />
-      </div>
     </Router>
   );
 };

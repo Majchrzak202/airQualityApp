@@ -9,19 +9,10 @@ import orangeMask from "..//assets/orangemask.png";
 import redBike from "..//assets/redmask.png";
 import redWindow from "..//assets/redwindow.png";
 import redMask from "..//assets/redmask.png";
-import AirQuality from "./AirQuality";
 
-const RecomendationItem = ({ aqiLevel, airQuality }) => {
+const RecomendationItem = ({ aqiLevel }) => {
   let recoText = "";
   let recoImg = "";
-
-  if (airQuality === undefined) {
-    return null
-  }
-
-  console.log(airQuality['city_name'])
-
-  
 
   if (aqiLevel < 50) {
     recoText = ["Enjoy outdoor acitvities", "Open windows", "Mask not needed"];

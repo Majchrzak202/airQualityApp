@@ -13,7 +13,7 @@ import otherRed from "../assets/OTHER_RED.png";
 
 const AirQuality = ({ airQuality, aqiLevel }) => {
   const [aqiImage, setAqiImage] = useState("");
-  const [airCondition, setAirCondition] = useState('')
+  const [airCondition, setAirCondition] = useState("");
 
   let pm10Level = "";
   let pm25Level = "";
@@ -30,23 +30,23 @@ const AirQuality = ({ airQuality, aqiLevel }) => {
       switch (true) {
         case aqiLevel <= 50:
           setAqiImage(Green);
-          setAirCondition('Good')
+          setAirCondition("Good");
           break;
         case aqiLevel >= 51 && aqiLevel <= 99:
           setAqiImage(Yellow);
-          setAirCondition('Moderate')
+          setAirCondition("Moderate");
           break;
         case aqiLevel >= 100 && aqiLevel <= 149:
           setAqiImage(Orange);
-          setAirCondition('Unhealthy for sensitive')
+          setAirCondition("Unhealthy for sensitive");
           break;
         case aqiLevel >= 150 && aqiLevel <= 199:
           setAqiImage(Red);
-          setAirCondition('Unhealthy')
+          setAirCondition("Unhealthy");
           break;
         case aqiLevel >= 200:
           setAqiImage(Purple);
-          setAirCondition('Hazardous')
+          setAirCondition("Hazardous");
           break;
         default:
           setAqiImage("");
@@ -56,10 +56,10 @@ const AirQuality = ({ airQuality, aqiLevel }) => {
   }, [aqiLevel]);
 
   if (airQuality === undefined) {
-    return null
+    return null;
   }
 
-  const cityname = airQuality['city_name']
+  const cityname = airQuality["city_name"];
 
   let imagePM10 = "";
   let imagePM25 = "";
@@ -103,7 +103,7 @@ const AirQuality = ({ airQuality, aqiLevel }) => {
 
   return (
     <section className="air-section">
-      <Card>
+      <Card aqiLevel={aqiLevel}>
         <div className="air-quality">
           <div className="city">
             <h4>{cityname} </h4>
@@ -116,16 +116,25 @@ const AirQuality = ({ airQuality, aqiLevel }) => {
             </div>
             <ul className="air-list">
               <li className="air-list-li">
-                <img alt="3" src={imagePM10}></img>
-                <div>PM 10:{pm10Level}</div>
+                <div className="itemdiv">
+                  <p className="marker">PM10</p>
+                  <img className="markerimg" alt="3" src={imagePM10}></img>
+                  <p>{pm10Level}</p>
+                </div>
               </li>
               <li className="air-list-li">
-                <img alt="2" src={imagePM25}></img>
-                <div>PM 25:{pm25Level}</div>
+                <div className="itemdiv">
+                <p className="marker">PM25</p>
+                  <img  className="markerimg" alt="2" src={imagePM25}></img>
+                  <p>{pm25Level}</p>
+                </div>
               </li>
               <li className="air-list-li">
-                <img alt="1" src={imageo3}></img>
-                <div>o3:{o3Level}</div>
+                <div className="itemdiv">
+                <p className="marker">o3   .....</p>
+                  <img  className="markerimg" alt="1" src={imageo3}></img>
+                  <p>{o3Level}</p>
+                </div>
               </li>
             </ul>
           </div>

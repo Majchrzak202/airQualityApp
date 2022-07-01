@@ -1,24 +1,5 @@
 .card {
   display: flex;
-  max-width: 60vw;
-  min-height: 60vh;
-  min-width: 60vw;
-  justify-content: center;
-  align-items: center;
-  background-color: hsla(147, 100%, 86.61%, 0.54);
-  border-radius: 4px;
-  background-color: hsla(147, 100%, 86.61%, 0.54);
-  background-image: linear-gradient(
-    270deg,
-    rgba(187, 255, 217, 0.54) 14%,
-    white
-  );
-  box-shadow: 1px 1px 7px -2px black;
-}
-
-.div-block-3 {
-  display: flex;
-  max-width: 60vw;
   min-height: 60vh;
   min-width: 60vw;
   justify-content: center;
@@ -31,25 +12,25 @@
   background-image: linear-gradient(
     270deg,
     rgba(187, 255, 217, 0.54) 14%,
-    white
+    RGBA(47, 194, 27, 0.56)
   );
-  box-shadow: 1px 1px 7px -2px black;
+  box-shadow: 0.5 px 1px 7px -2px black;
 }
 
-.div-block-3:tiny {
-  min-width: 90vw;
-  flex-direction: column;
+#Yellow {
+  background-color: hsla(147, 100%, 86.61%, 0.54);
+  background-image: linear-gradient(
+    270deg,
+    rgba(252, 249, 37, 0.54) 14%,
+    RGBA(255, 255, 20, 0.56)
+  );
 }
 
-.div-block-3:small {
-  min-width: 90vw;
-}
-
-.div-block-3:tiny {
-  min-width: 90vw;
-  flex-direction: column;
-}
-
-.div-block-3:small {
-  min-width: 90vw;
+#Red {
+  background-color: hsla(147, 100%, 86.61%, 0.54);
+  background-image: linear-gradient(
+    270deg,
+    rgba(240, 58, 58, 0.54) 14%,
+    RGBA(242,6,20,0.56)
+  );
 }

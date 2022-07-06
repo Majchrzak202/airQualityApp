@@ -15,6 +15,13 @@
   align-items: center;
 }
 
+/* .city {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+} */
+
 .data {
   display: flex;
   flex-direction: row;
@@ -22,12 +29,7 @@
   align-items: center;
 }
 
-.city {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
+
 
 .image {
   margin-right: 5px;

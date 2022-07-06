@@ -106,8 +106,9 @@ const AirQuality = ({ airQuality, aqiLevel }) => {
       <Card aqiLevel={aqiLevel}>
         <div className="air-quality">
           <div className="city">
-            <h4>{cityname} </h4>
-            <h4>Air qulaity: {airCondition}</h4>
+            <h4>
+              Air Quality in {cityname}:{airCondition}
+            </h4>
           </div>
           <div className="data">
             <img className="image" src={aqiImage} alt="img" />
@@ -119,20 +120,20 @@ const AirQuality = ({ airQuality, aqiLevel }) => {
                 <div className="itemdiv">
                   <p className="marker">PM10</p>
                   <img className="markerimg" alt="3" src={imagePM10}></img>
-                  <p>{pm10Level}</p>
+                  <p>{pm10Level}µg/m³</p>
                 </div>
               </li>
               <li className="air-list-li">
                 <div className="itemdiv">
-                <p className="marker">PM25</p>
-                  <img  className="markerimg" alt="2" src={imagePM25}></img>
-                  <p>{pm25Level}</p>
+                  <p className="marker">PM25</p>
+                  <img className="markerimg" alt="2" src={imagePM25}></img>
+                  <p>{pm25Level}µg/m³</p>
                 </div>
               </li>
               <li className="air-list-li">
                 <div className="itemdiv">
-                <p className="marker">o3   .....</p>
-                  <img  className="markerimg" alt="1" src={imageo3}></img>
+                  <p className="marker">o3 .....</p>
+                  <img className="markerimg" alt="1" src={imageo3}></img>
                   <p>{o3Level}</p>
                 </div>
               </li>

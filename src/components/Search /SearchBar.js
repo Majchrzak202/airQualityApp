@@ -1,5 +1,6 @@
 import "./SearchBar.css";
 import React, { useState } from "react";
+import { Box } from "@material-ui/core";
 
 const SearchBar = ({ searchHandler }) => {
   const [input, setInput] = useState("");
@@ -20,36 +21,33 @@ const SearchBar = ({ searchHandler }) => {
   };
 
   return (
-    <div className="form">
-      <h2>Search the City or Country...</h2>
-      <form>
-        <div className="input">
-          <input onChange={inputHandler} type="text" value={input} placeholder='city/country name' />
-        </div>
-        <div className="form-button">
-          <button onClick={citySearchHandler} className="button">
-            Search
-          </button>
-        </div>
-      </form>
-    </div>
-
-    /*  <section className="section-search">
-      <div className="searchbar">
+    <Box
+      style={{
+        display: "flex",
+        minHeight: "100vh",
+        justifyItems: "center",
+        alignItems: "center ",
+      }}
+    >
+      <div className="form">
+        <h2>Search the City or Country...</h2>
         <form>
-          <div className='input'>
+          <div className="input">
             <input
-              value={input}
               onChange={inputHandler}
-              placeholder="City name"
+              type="text"
+              value={input}
+              placeholder="city/country name"
             />
           </div>
-          <div className='form-button'>
-            <button className="button" onClick={citySearchHandler}>Search</button>
+          <div className="form-button">
+            <button onClick={citySearchHandler} className="button">
+              Search
+            </button>
           </div>
         </form>
       </div>
-    </section> */
+    </Box>
   );
 };
 
